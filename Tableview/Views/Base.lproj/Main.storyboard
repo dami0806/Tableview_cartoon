@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="143" id="RGG-K1-zNU" customClass="MovieCell" customModule="Tableview" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="143" id="RGG-K1-zNU" customClass="MovieCell" customModule="Tableview" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="143"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RGG-K1-zNU" id="jHs-ix-6Fr">
@@ -67,8 +67,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="desciptionLabel" destination="tLT-pN-Qre" id="Xbr-tw-zPQ"/>
-                                            <outlet property="mainImageLabel" destination="jHs-ix-6Fr" id="bTT-Rf-sfb"/>
-                                            <outlet property="movieNameLabel" destination="l1w-bU-aNv" id="e8h-4K-SaW"/>
+                                            <outlet property="mainImageView" destination="un0-1y-eXm" id="hLb-Y0-6mx"/>
+                                            <outlet property="movieNameLabel" destination="bhq-Ev-Br0" id="JFc-44-n4h"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -83,6 +83,9 @@
                             <constraint firstItem="YPc-6c-PZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oOe-Zs-RvP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="YPc-6c-PZR" id="uMP-af-nKO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

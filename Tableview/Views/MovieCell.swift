@@ -9,11 +9,9 @@ import UIKit
 
 class MovieCell: UITableViewCell {
     
-    @IBOutlet weak var mainImageLabel: UIView!
     
-    
-    @IBOutlet weak var movieNameLabel: UIStackView!
-    
+    @IBOutlet weak var mainImageView: UIImageView!
+    @IBOutlet weak var movieNameLabel: UILabel!
     @IBOutlet weak var desciptionLabel: UILabel!
     
 
