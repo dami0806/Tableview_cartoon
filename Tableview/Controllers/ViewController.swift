@@ -7,23 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(#function)
-        return movieDataManager.getMovieData().count
-       
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
-        let array = movieDataManager.getMovieData()
-        let movie = array[indexPath.row]
-        cell.mainImageView.image = movie.movieImage
-        cell.movieNameLabel.text = movie.movieName
-        cell.desciptionLabel.text = movie.movieDescription
-        print(#function)
-        return cell
-    }
+class ViewController: UIViewController{
+   
     
     
     //var movieArray:[Movie] = []
@@ -44,5 +29,24 @@ class ViewController: UIViewController,UITableViewDataSource {
     }
     
    
+}
+extension ViewController: UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(#function)
+        return movieDataManager.getMovieData().count
+       
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableview.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        let array = movieDataManager.getMovieData()
+        let movie = array[indexPath.row]
+        cell.mainImageView.image = movie.movieImage
+        cell.movieNameLabel.text = movie.movieName
+        cell.desciptionLabel.text = movie.movieDescription
+        print(#function)
+        return cell
+    }
 }
 
