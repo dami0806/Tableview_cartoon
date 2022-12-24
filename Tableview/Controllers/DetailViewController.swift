@@ -11,10 +11,10 @@ class DetailViewController: UIViewController {
 
     
     @IBOutlet weak var mainImageView: UIImageView!
-    
     @IBOutlet weak var movieNameLabel: UILabel!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    //전화면에서 Movie데이터를 전달 받기 위한 함수
     var movieData:Movie?
     
     
@@ -28,6 +28,7 @@ class DetailViewController: UIViewController {
         mainImageView.image = movieData?.movieImage
         movieNameLabel.text = movieData?.movieName
         descriptionLabel.text = movieData?.movieDescription
+        self.descriptionLabel.numberOfLines  = 0
     }
     
 
